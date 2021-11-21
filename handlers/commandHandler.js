@@ -15,6 +15,23 @@ module.exports = (client) => {
                     command.aliases.forEach((alias) =>
                         client.aliases.set(alias, command.name)
                     );
+
+                    // const guildId = '808385971418693652';
+                    // const guild = client.guilds.cache.get(guildId);
+                    // let _commands;
+                
+                    // if (guild) {
+                    //     _commands = guild.commands;
+                    // } else {
+                    //     _commands = client.application.commands;
+                    // }
+                
+                    // _commands.create({
+                    //     name: 'ping',
+                    //     description: 'replies with pong',
+                    // });
+
+
             }
         });
         // // Filters out any other files that are not .js, such as .png

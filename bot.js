@@ -1,5 +1,5 @@
 const { Client, Intents, Collection } = require('discord.js');
-require('dotenv').config();
+require('dotenv').config({ path: __dirname + '/.env.local' });
 const { readdirSync } = require('fs');
 const client = new Client({
     intents: [
@@ -75,5 +75,4 @@ client.categories = readdirSync('./commands/').filter(dir => dir !== 'Experiment
 //     else if (command === 'leave')
 //         client.commands.get('leave').run( message, args);
 // });
-
 client.login(process.env.BOT_TOKEN);
